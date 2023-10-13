@@ -1,43 +1,11 @@
-F23::SwitchToChromeTabLeft()
-SwitchToChromeTabLeft() 
-{
-    IfWinActive, ahk_exe brave.exe
-    {
-        Send, ^{PgUp}
-    }
-}
+#IfWinActive ahk_exe brave.exe
+F23:: Send, ^{PgUp}
++F15:: Send, ^{PgDn}
+F20:: Send, ^+T   
 
-+F15::SwitchToChromeTabRight()
-SwitchToChromeTabRight() 
-{
-    IfWinActive, ahk_exe brave.exe
-    {
-        Send, ^{PgDn}
-    }
-}
+#IfWinActive ahk_exe Discord.exe
+F22:: Send, ^+M
+F16:: Send, ^+D
 
-F20::OpenClosedTab()
-OpenClosedTab() 
-{
-    IfWinActive, ahk_exe brave.exe
-    {
-	    Send, ^+T   
-    }
-}
-
-F22::ToggleMuteDiscord()
-ToggleMuteDiscord() 
-{
-    IfWinActive, ahk_exe Discord.exe
-    {
-	    Send, ^+M
-    }
-}
-F16::ToggleDeafenDiscord()
-ToggleDeafenDiscord()
-{
-    IfWinActive, ahk_exe Discord.exe
-    {
-        send, ^+D
-    }
-}
+#IfWinActive
+F15:: Send, +#s
