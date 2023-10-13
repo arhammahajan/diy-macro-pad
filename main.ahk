@@ -22,7 +22,7 @@ OpenClosedTab()
 {
     IfWinActive, ahk_exe brave.exe
     {
-	Send, ^+T   
+	    Send, ^+T   
     }
 }
 
@@ -31,6 +31,14 @@ ToggleMuteDiscord()
 {
     IfWinActive, ahk_exe Discord.exe
     {
-	Send, ^+M
+	    Send, ^+M
+    }
+}
+F16::ToggleDeafenDiscord()
+ToggleDeafenDiscord()
+{
+    IfWinActive, ahk_exe Discord.exe
+    {
+        send, ^+D
     }
 }
